@@ -1,0 +1,33 @@
+.employee-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    padding:30px;
+    background-color: rgb(92, 87, 113);
+    border-radius: 30px;
+  }
+  .employee-card {
+    width:628px;
+    height: 700px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin: 10px;
+    text-align: center;
+    background-image:url('../assets/card.jpeg');
+    background-position: right;
+  }
+  h2{
+    font-size: xx-large;
+    color:rgb(66, 63, 81); ;
+  }
+  p{
+    font-weight:700;
+  }
+   ul{
+    list-style: none !important;
+    margin-top: 185px;
+    line-height:20px;
+  }
+  
+  

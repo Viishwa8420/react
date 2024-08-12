@@ -1,0 +1,29 @@
+.card{
+    overflow: hidden!important;
+}
+.card p{
+    font-size:medium !important;
+    color: rgb(125, 16, 16) !important;
+}
+img{
+    object-fit: cover !important;
+    width: 100% !important;
+    height:300px !important;
+    transition:1s!important;
+}
+img:hover{
+    transform: scale(1.1)!important;
+   
+}
+a{
+    color: aliceblue !important;
+}
+tbody{
+    font-size:medium!important;
+}
+tbody tr td{
+    color: rgb(125, 16, 16) !important;
+}
+.table thead{
+    color: black !important;
+}
