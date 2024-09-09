@@ -1,0 +1,126 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image:url("../src/back.jpeg");
+  backdrop-filter:blur(10px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} 
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 94.5vh;
+}
+
+.todo-container {
+  background-color: rgb(213, 244, 248);
+  border: 2px solid #515351;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.todo-title {
+  text-align: center;
+  font-size: 24px;
+  color: #007b95;
+  margin-bottom: 20px;
+}
+
+.add-Task-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-btn {
+  background-color: #007b95;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #045868;
+}
+
+.Tasks-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.Tasks-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.Task-card {
+  border: 1px solid #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-image:url("../src/pic-1.jpg");
+  backdrop-filter:blur(20px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Task-card h4 {
+  margin-bottom: 5px;
+  color: #d1eff1;
+}
+
+.Task-card p {
+  margin-bottom: 5px;
+  color: #c7e5e7;
+}
+
+.Task-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.Task-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Task-actions button {
+  font-size: 16px;
+  color: #e7dbdb;
+}
+
+.Task-actions button:hover  {
+  color: #007b95;
+}
+
+.Task-actions button:hover .fa-trash {
+  color: #f44336;
+}
