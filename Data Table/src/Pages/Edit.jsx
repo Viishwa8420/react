@@ -22,18 +22,22 @@ const Edituser = () => {
   useEffect(() => {
     const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
     setAllUsers(storedUsers);
-
-    if (user) {
-      setUserName(user.userName);
-      setUserEmail(user.userEmail);
-      setUserPassword(user.userPassword);
-      setUserGender(user.userGender);
-      setUserCourses(user.userCourses);
-      setUserDate(user.userDate);
-      setUserStatus(user.userStatus);
+  
+    const currentUser = storedUsers.find(user => user.id === parseInt(id));
+    if (currentUser) {
+      setUserName(currentUser.userName);
+      setUserEmail(currentUser.userEmail);
+      setUserPassword(currentUser.userPassword);
+      setUserGender(currentUser.userGender);
+      setUserCourses(currentUser.userCourses);
+      setUserDate(currentUser.userDate);
+      setUserStatus(currentUser.userStatus);
+    } else {
+      toast.error("User not found");
+      navigateTo('/view'); // Redirect to user list if user not found
     }
-  }, [user]);
-
+  }, [id, navigateTo]);
+  
   const handleCourseSelection = (event) => {
     const { value, checked } = event.target;
     if (checked) {
@@ -45,14 +49,14 @@ const Edituser = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-
+  
     if (!userName || !userEmail || !userPassword || !userGender || !userCourses.length || !userDate || !userStatus) {
       toast.error("All fields are required.");
       return;
     }
-
+  
     const updatedUser = {
-      id: parseInt(id),
+      id: parseInt(id),  // Ensure the ID is correctly retained
       userName,
       userEmail,
       userPassword,
@@ -61,17 +65,19 @@ const Edituser = () => {
       userDate,
       userStatus,
     };
+  
+    const updatedUsers = allUsers.map(user => user.id === parseInt(id) ? updatedUser : user);
+  // Ensure the data is properly updated in local storage before navigating
+localStorage.setItem('users', JSON.stringify(updatedUsers));
+setAllUsers(updatedUsers);
 
-    const updatedUsers = allUsers.map((user) => user.id === parseInt(id) ? updatedUser : user);
+// Toast and then navigate
+toast.success("User updated successfully.", {
+  onClose: () => navigateTo('/view')  // Redirect after toast success
+});
 
-    localStorage.setItem('users', JSON.stringify(updatedUsers));
-    setAllUsers(updatedUsers);
-
-    toast.success("User updated successfully.");
-    
-     navigateTo('/view');
   };
-
+  
   return (
     <div>
       <Header />

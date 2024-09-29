@@ -187,7 +187,8 @@ const ViewUsers = () => {
                   </td>
                   <td>
                     <button className="btn btn-danger me-2" onClick={() => handleDelete(user.id)}><MdDelete/></button>
-                    <button className="btn btn-info" onClick={() => navigateTo('/edit', { state: user })}><FaEdit/></button>
+                    <button className="btn btn-info" onClick={() => navigateTo(`/edit/${user.id}`)}><FaEdit /></button>
+
                   </td>
                 </tr>
               ))}
