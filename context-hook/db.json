@@ -1,0 +1,31 @@
+{
+    "users": [
+      {
+        "id": "b809",
+        "name": "Jigna",
+        "email": "jigna@gmail.com",
+        "password": "12345",
+        "phone": "1254566",
+        "city": "Surat",
+        "role": "admin"
+      },
+      {
+        "id": "ce85",
+        "name": "Vruti",
+        "email": "vruti@gmail.com",
+        "password": "123456",
+        "phone": "54543423424",
+        "city": "Pune",
+        "role": "user"
+      },
+      {
+        "id": "d8a8",
+        "name": "Shree",
+        "email": "Shree@gmail.com",
+        "password": "1234",
+        "phone": "45454332",
+        "city": "Mumbai",
+        "role": "user"
+      }
+    ]
+  }
